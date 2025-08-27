@@ -654,7 +654,7 @@ class PyIntruderPro:
         
         if not injection_points:
             ColorLogger.warning("No injection points found!")
-            ColorLogger.info("💡 Try one of these approaches:")
+            ColorLogger.info("[+] Try one of these approaches:")
             ColorLogger.info("   1. Use --parameters 'username:FUZZ,password:admin123'")
             ColorLogger.info("   2. Add § markers in request file: username=§admin§")
             ColorLogger.info("   3. Use --auto-detect to find parameters automatically")
@@ -677,10 +677,10 @@ class PyIntruderPro:
             use_wordlist = original_value.upper() in ['FUZZ', 'WORDLIST', ''] or context == 'marker'
             
             if use_wordlist:
-                ColorLogger.info(f"🎯 Fuzzing {context}.{param_name} with {len(payloads)} payloads...")
+                ColorLogger.info(f"Fuzzing {context}.{param_name} with {len(payloads)} payloads...")
                 test_payloads = payloads
             else:
-                ColorLogger.info(f"📌 Testing {context}.{param_name} with fixed value: '{original_value}'")
+                ColorLogger.info(f"Testing {context}.{param_name} with fixed value: '{original_value}'")
                 test_payloads = [original_value]
             
             tasks = []
@@ -731,7 +731,7 @@ class PyIntruderPro:
         
         # Potential Vulnerabilities
         if analysis['potential_vulnerabilities']:
-            print(f"\n{Fore.RED}🚨 POTENTIAL VULNERABILITIES DETECTED:{Style.RESET_ALL}")
+            print(f"\n{Fore.RED}[!!] POTENTIAL VULNERABILITIES DETECTED:{Style.RESET_ALL}")
             for vuln in analysis['potential_vulnerabilities']:
                 ColorLogger.vuln(f"{vuln['type']}: {vuln['count']} instances")
                 print(f"   Sample payloads: {', '.join(vuln['payloads'][:3])}")
@@ -754,7 +754,7 @@ class PyIntruderPro:
         # Error Analysis
         error_responses = [r for r in self.results if r.error]
         if error_responses:
-            print(f"\n{Fore.RED}❌ ERROR RESPONSES ({len(error_responses)}):{Style.RESET_ALL}")
+            print(f"\n{Fore.RED}[!] ERROR RESPONSES ({len(error_responses)}):{Style.RESET_ALL}")
             error_types = Counter([r.error.split(':')[0] for r in error_responses])
             for error_type, count in error_types.most_common(5):
                 print(f"   {error_type}: {count} occurrences")
