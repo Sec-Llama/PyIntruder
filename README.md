@@ -95,7 +95,7 @@ python pyintruder.py -r request.txt -w huge-wordlist.txt \
   --output detailed_report.json
 ```
 
-## 📋 Command Line Options
+## Command Line Options
 
 | Option | Description | Default |
 |--------|-------------|---------|
