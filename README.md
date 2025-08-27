@@ -37,7 +37,7 @@ PyIntruder Pro is a next-generation web application security testing tool design
 
 ### Quick Install
 ```bash
-git clone https://github.com/yourusername/pyintruder-pro.git
+git clone https://github.com/sec-llama/pyintruder-pro.git
 cd pyintruder-pro
 pip install -r requirements.txt
 ```
