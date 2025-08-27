@@ -240,8 +240,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the security community**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/pyintruder-pro?style=social)](https://github.com/yourusername/pyintruder-pro/stargazers)
-[![Twitter Follow](https://img.shields.io/twitter/follow/yourusername?style=social)](https://twitter.com/yourusername)
+[![GitHub stars](https://img.shields.io/github/stars/sec-llama/pyintruder-pro?style=social)](https://github.com/yourusername/pyintruder-pro/stargazers)
 
 </div>
 
