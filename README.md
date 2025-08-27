@@ -1,4 +1,4 @@
-# PyIntruder Pro 🎯
+# PyIntruder Pro
 
 <div align="center">
 
@@ -15,11 +15,11 @@
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 PyIntruder Pro is a next-generation web application security testing tool designed for penetration testers, bug bounty hunters, and security researchers. It combines the power of automated fuzzing with intelligent analysis capabilities to identify security vulnerabilities with minimal false positives.
 
-### ✨ Key Features
+###  Key Features
 
 - 🎯 **Smart Payload Injection** - Multiple injection strategies including manual parameters, marker-based (§), and auto-detection
 - 🧠 **Intelligent Analysis** - Advanced response clustering and anomaly detection
@@ -29,7 +29,7 @@ PyIntruder Pro is a next-generation web application security testing tool design
 - 🎨 **Professional Interface** - Colored output with progress tracking
 - 🔧 **Burp Integration** - Direct import of Burp Suite request files
 
-## 🛠️ Installation
+##  Installation
 
 ### Requirements
 - Python 3.7+
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 pip install aiohttp aiofiles colorama
 ```
 
-## 🎯 Usage Examples
+##  Usage Examples
 
 ### 1. Manual Parameter Specification (Recommended)
 ```bash
@@ -110,7 +110,7 @@ python pyintruder.py -r request.txt -w huge-wordlist.txt \
 | `-o, --output` | JSON report output file | None |
 | `--show-all` | Show all responses | False |
 
-## 🎨 Parameter Specification Formats
+##  Parameter Specification Formats
 
 ### Context Types
 - `url:param:value` - URL parameters
@@ -137,7 +137,7 @@ python pyintruder.py -r request.txt -w huge-wordlist.txt \
 --parameters "url:callback:FUZZ,body:csrf_token:abc123,header:Authorization:Bearer FUZZ"
 ```
 
-## 🔍 Advanced Analysis Features
+##  Advanced Analysis Features
 
 ### Vulnerability Detection
 - **Authentication Bypass** - Identifies responses that differ from expected patterns
@@ -152,21 +152,21 @@ python pyintruder.py -r request.txt -w huge-wordlist.txt \
 - Server configuration errors
 - Application-specific error messages
 
-## 📊 Output & Reporting
+##  Output & Reporting
 
 ### Console Output
 ```
 [INFO] Loading request template from login.txt
 [SUCCESS] Parsed POST request to target.com
 [SUCCESS] Loaded 1000 payloads
-🎯 Fuzzing body.username with 1000 payloads...
+Fuzzing body.username with 1000 payloads...
 Progress [1/1]: 100.0% (1000/1000) ✓ body.username
 
-🚨 POTENTIAL VULNERABILITIES DETECTED:
+POTENTIAL VULNERABILITIES DETECTED:
 [VULN] User Enumeration (Response Based): 3 instances
    Sample payloads: admin, administrator, root
 
-🔍 INTERESTING RESPONSES (15):
+INTERESTING RESPONSES (15):
    Status 200, Length 1247: 12 responses (e.g., 'admin')
    Status 500, Length 0: 3 responses (e.g., 'admin"')
 ```
@@ -188,7 +188,7 @@ Progress [1/1]: 100.0% (1000/1000) ✓ body.username
 }
 ```
 
-## 🎯 Use Cases
+##  Use Cases
 
 ### Bug Bounty Hunting
 - Parameter discovery and fuzzing
@@ -216,7 +216,7 @@ This tool is designed for authorized security testing only. Users are responsibl
 - Complying with applicable laws and regulations
 - Using the tool ethically and professionally
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) and submit pull requests for:
 - New vulnerability detection modules
@@ -224,11 +224,11 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 - Additional payload injection techniques
 - Documentation improvements
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Inspired by PortSwigger's Burp Suite Intruder
 - Built with modern Python async/await patterns
@@ -245,7 +245,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 </div>
 
-## 📚 Quick Start Guide
+##  Quick Start Guide
 
 ### 1. Export Request from Burp
 1. Right-click request in Burp Suite
